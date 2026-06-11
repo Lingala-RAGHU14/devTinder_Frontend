@@ -7,4 +7,4 @@ This template provides a minimal setup to get React working in Vite with HMR and
 3) installed Tailwind css
 4) installed daisy UI
 5) add navbar component to app.jsx
-6) create a seprate navbar file 
+6) create a seprate navbar file
