@@ -27,7 +27,7 @@ const Navbar = () => {
     <Link to="/" className="btn btn-ghost text-xl">DevTinder</Link>
   </div>
   {user && <div className="flex gap-2 items-center">
-    <p>welcome, {user.lastName}</p>
+    <p>welcome, {user.firstName}</p>
     <div className="dropdown dropdown-end mx-6">
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
@@ -38,7 +38,7 @@ const Navbar = () => {
       </div>
       <ul
         tabIndex="-1"
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+        className="menu menu-sm dropdown-content bg-base-200 rounded-box z-1 mt-3 w-52 p-2 shadow">
         <li>
           <Link to="/profile" className="justify-between"> 
             Profile

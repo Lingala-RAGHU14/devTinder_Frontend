@@ -23,3 +23,4 @@ This template provides a minimal setup to get React working in Vite with HMR and
 18) refactor our code to add constant file in utils folder and create a component folder
 - we should not be access the other routes without login 
 - if token is not present the user redirect to login page
+- created a logout page
