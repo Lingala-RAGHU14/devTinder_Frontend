@@ -29,4 +29,10 @@ This template provides a minimal setup to get React working in Vite with HMR and
 - edit profile feature 
 - show taste message on save of profile 
 -  set all user connections in connection page
-- set all user request on request page
+- set all user request on request page 
+- feature : Accept reject the request
+
+remaining 
+    - send/ignore the feedCard of the feed api
+    - signup the new user 
+    - end to end testing
