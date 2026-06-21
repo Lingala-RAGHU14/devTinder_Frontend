@@ -1,5 +1,5 @@
 
-const card = ({user}) => {
+const Card = ({user}) => {
   console.log(user)
   const {photoUrl, firstName, about, age, gender, lastName} = user
     return  (
@@ -22,4 +22,4 @@ const card = ({user}) => {
     )
 }
 
-export default card;
+export default Card;

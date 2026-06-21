@@ -24,3 +24,9 @@ This template provides a minimal setup to get React working in Vite with HMR and
 - we should not be access the other routes without login 
 - if token is not present the user redirect to login page
 - created a logout page
+- get the feed and add it in to the store 
+- build the user card on the feed 
+- edit profile feature 
+- show taste message on save of profile 
+-  set all user connections in connection page
+- set all user request on request page
