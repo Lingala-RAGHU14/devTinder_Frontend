@@ -11,11 +11,12 @@ const Requests = () => {
   const dispatch = useDispatch();
   const reviewRequest = async (status, _id) => {
     try {
-      const res = await axios.post(
+      const response = await axios.post(
         BASE_URL + "/request/review/" + status + "/" + _id,
         {},
         { withCredentials: true },
       );
+      console.log(response.data)
       dispatch(removeRequest(_id))
     } catch (err) {
       console.error(err.message);
@@ -64,13 +65,13 @@ const Requests = () => {
               </div>
               <div className="">
                 <button
-                  className="btn btn-secondary m-5 text-xl"
+                  className="btn btn-secondary m-2 text-xl"
                   onClick={() => reviewRequest("accepted", request._id)}
                 >
                   Accept
                 </button>
                 <button
-                  className="btn btn-primary text-xl"
+                  className="btn btn-primary text-xl m-2"
                   onClick={() => reviewRequest("rejected", request._id)}
                 >
                   Reject

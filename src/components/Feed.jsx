@@ -12,6 +12,7 @@ const Feed = () => {
 
   const getFeed = async () => {
     if (feed) return;
+
     try {
       const res = await axios.get(BASE_URL + "/feed", {
         withCredentials: true,
@@ -25,14 +26,21 @@ const Feed = () => {
   useEffect(() => {
     getFeed();
   }, []);
+  if (!feed) return <h1 className="text-center mt-10">Loading...</h1>;
+
+  const users = Array.isArray(feed?.message)
+    ? feed.message
+    : Array.isArray(feed)
+    ? feed
+    : [];
+
+  if (users.length <= 0)
+    return <h1 className="flex justify-center m-5">No New Users Found!!!</h1>;
 
   return (
-    feed && (
-      <div className="flex justify-center my-5">
-        <Card user={feed?.message[0]} />
-        {/* console.log(user) */}
-      </div>
-    )
+    <div className="flex justify-center my-5">
+      <Card user={users[0]} />
+    </div>
   );
 };
 
